@@ -126,29 +126,7 @@ while(ans.ToLower() != "nej" && ans.ToLower() != "ja")
         Thread.Sleep(1000);
     }
 }
-try
-{
-    while (ans!= "jag")
-    {
 
-        Console.WriteLine("Vilka kort vill du byta?(skriv in alla nummer som du vill byta med ett mellanslag mellan varje nummer)");
-        ans = Console.ReadLine();
-        var cardchange = ans.Split(' ');
-        for (int i = 0; i < cardchange.Length; i++)
-        {
-            var indexcards = rand.Next(cards.Count);
-            int indexhand = int.Parse(cardchange[i]);
-            hand[indexhand] = (cards[indexcards]);
-            cards.RemoveAt(indexcards);
-        }
-
-        show();
-    }
-}
-catch
-{
-    Console.WriteLine();
-}
 Thread.Sleep(1000);
 
 //Räknar ut resultat
@@ -295,6 +273,7 @@ if(färg == true)
     else if (stege == true )
     {
         Console.WriteLine("Färg stege!");
+        stege=false;
     }
     else 
     {
